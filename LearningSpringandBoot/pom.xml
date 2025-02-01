@@ -5,4 +5,20 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>com.myapp.learning</name>
   <description>Creating first Maven project in eclipse to run and start Spring on eclipse with github</description>
+  
+  <dependencies>
+  	
+  	<dependency>
+  		<groupId>org.springframework</groupId>
+  		<artifactId>spring-context</artifactId>
+  		<version>6.2.1</version>
+  	</dependency>
+  
+  	<dependency>
+  		<groupId>junit</groupId>
+  		<artifactId>junit</artifactId>
+  		<version>3.8.1</version>
+  		<scope>test</scope>
+  	</dependency>
+  </dependencies>
 </project>
