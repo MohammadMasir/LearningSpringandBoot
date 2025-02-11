@@ -9,7 +9,8 @@ public class App {
 		
 		ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 		
-//		Dev obj = context.getBean(Dev.class); 2
-//		obj.build();
+//		Dev obj = context.getBean(Dev.class); // 2 (Here i have given the specific class name of the class present in the bean factory)
+		Dev obj = (Dev) context.getBean("dev"); // (Here i have given the bean the bean that is to be used which is present in the bean factory) BOTH METHOD WILL WORK.
+		obj.build();
 	}
 }
