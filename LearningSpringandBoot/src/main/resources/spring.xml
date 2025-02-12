@@ -4,14 +4,11 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
-	<bean id="dev" class="com.myapp.Dev">
-	<!--  	<property name="laptop" ref="Lap"/>  "property" tag is used for setter injection. --> 
-			<constructor-arg name="laptop" ref="Lap"/> <!-- "constructor-arg" is used for CDI -->
+	<bean id="dev" class="com.myapp.Dev" autowire="byType" >
+		<!-- <property name="computer" ref="lap"/>  Here we are manually wiring the dependencies by referring the name of the dependencies--> 
 	</bean>
 	
-	<bean id="Lap" class="com.myapp.Laptop"> <!-- try using ""com.myapp.Dev" instead of "com.myapp.Laptop"-->
-		
-		
-	</bean>
+	<bean id="lap" class="com.myapp.Laptop" primary="true"/>
+	<bean id="desk" class="com.myapp.Desktop" />
 
 </beans>
